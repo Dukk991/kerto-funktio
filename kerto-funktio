@@ -1,0 +1,31 @@
+/*
+4. Tee ohjelma jossa on pääohjelma (main-funktio) sekä yksi funktio eli aliohjelma, joka kysyy
+float-luvun käyttäjältä, kertoo luvun kolmella ja palauttaa tuloksen main()-funktiolle, jossa
+tulos tulostetaan näytölle.
+*/
+
+#include <stdio.h>
+
+float numberC() {
+    //kysyy käyttäjältä numeron
+    printf("Anna numero: \n");
+    float number1;
+    
+    //lukee annetun numeron
+    scanf("%f", &number1);
+    
+    //laskee käyttäjän antaman numeron kolmella
+    float timesC = number1 * 3;
+    
+    //palauttaa main-funktioon
+    return timesC;
+}
+
+int main() {
+    
+    float tulos = numberC();
+    
+    //tulostaa tuloksen
+    printf("Antamasi numero kerrottuna kolmella on %.2f\n", tulos);
+    return 0;
+}
